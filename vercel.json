@@ -1,13 +1,14 @@
 {
-    "functions": {
-        "bot.py": {
-            "runtime": "python3.12"
-        }
-    },
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "bot.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ]
 }
